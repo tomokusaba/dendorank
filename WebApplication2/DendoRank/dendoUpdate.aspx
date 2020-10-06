@@ -51,7 +51,7 @@
                     <asp:Parameter Name="SECOND" Type="Int32" />
                     <asp:Parameter Name="MEMBER" Type="Int32" />
                     <asp:Parameter Name="FILE_SIZE" Type="Int32" />
-                    <asp:Parameter Name="ROWID" Type="String" />
+                    <asp:Parameter Name="ROWID" Type="String" Direction="ReturnValue" />
                 </UpdateParameters>
             </asp:ObjectDataSource>
         </div>

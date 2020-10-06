@@ -47,6 +47,7 @@ namespace WebApplication2.DendoRank
         const string sql2017 = "select a_name 制作者名, hoshi 得点, (select count(hyoka_num) from chart where author_name = a_name and hyoka_num = 2 and nendo = '2017') 優, (select count(hyoka_num)  from     chart   where     author_name = a_name and  hyoka_num = 1 and  nendo = '2017') 良 , (select count(hyoka_num)   from chart   where author_name = a_name and hyoka_num = 0 and     nendo = '2017') 可 from(   select      sum(     case hyoka_num     when 0 then 1     when 1 then 2     when 2 then 4 end     ) hoshi,     author_name a_name   from      chart    where     nendo = '2017'   group by      author_name    order by hoshi desc) order by 得点 desc,a_name";
         const string sql2018 = "select a_name 制作者名, hoshi 得点, (select count(hyoka_num) from chart where author_name = a_name and hyoka_num = 2 and nendo = '2018') 優, (select count(hyoka_num)  from     chart   where     author_name = a_name and  hyoka_num = 1 and  nendo = '2018') 良 , (select count(hyoka_num)   from chart   where author_name = a_name and hyoka_num = 0 and     nendo = '2018') 可 from(   select      sum(     case hyoka_num     when 0 then 1     when 1 then 2     when 2 then 4 end     ) hoshi,     author_name a_name   from      chart    where     nendo = '2018'   group by      author_name    order by hoshi desc) order by 得点 desc,a_name";
         const string sql2019 = "select a_name 制作者名, hoshi 得点, (select count(hyoka_num) from chart where author_name = a_name and hyoka_num = 2 and nendo = '2019') 優, (select count(hyoka_num)  from     chart   where     author_name = a_name and  hyoka_num = 1 and  nendo = '2019') 良 , (select count(hyoka_num)   from chart   where author_name = a_name and hyoka_num = 0 and     nendo = '2019') 可 from(   select      sum(     case hyoka_num     when 0 then 1     when 1 then 2     when 2 then 4 end     ) hoshi,     author_name a_name   from      chart    where     nendo = '2019'   group by      author_name    order by hoshi desc) order by 得点 desc,a_name";
+        const string sql2020 = "select a_name 制作者名, hoshi 得点, (select count(hyoka_num) from chart where author_name = a_name and hyoka_num = 2 and nendo = '2020') 優, (select count(hyoka_num)  from     chart   where     author_name = a_name and  hyoka_num = 1 and  nendo = '2020') 良 , (select count(hyoka_num)   from chart   where author_name = a_name and hyoka_num = 0 and     nendo = '2020') 可 from(   select      sum(     case hyoka_num     when 0 then 1     when 1 then 2     when 2 then 4 end     ) hoshi,     author_name a_name   from      chart    where     nendo = '2020'   group by      author_name    order by hoshi desc) order by 得点 desc,a_name";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -229,6 +230,11 @@ namespace WebApplication2.DendoRank
                     sql = sql2019;
                     Label1.Text = "殿堂ポイント2019年度版";
                     ptitle.Text = "殿堂ランキング・殿堂ポイント2019年度版";
+                    break;
+                case "2020":
+                    sql = sql2020;
+                    Label1.Text = "殿堂ポイント2020年度版";
+                    ptitle.Text = "殿堂ランキング・殿堂ポイント2020年度版";
                     break;
                 default:
                     sql = sql12;
