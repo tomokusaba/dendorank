@@ -6,6 +6,8 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title id="ptitle" runat="server"></title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9638606265613636"
+     crossorigin="anonymous"></script>
 </head>
 <body>
     <form id="form1" runat="server">

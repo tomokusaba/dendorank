@@ -18,11 +18,11 @@ namespace WebApplication2.DendoRank
             
         }
         //const string strConnection = "Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = tcp) " +
-        //   "(HOST=192.168.11.120)(PORT=1521))(CONNECT_DATA=" +
+        //   "(HOST=192.168.11.130)(PORT=1521))(CONNECT_DATA=" +
         //   "(SERVICE_NAME=xe)))"
 
-        const string strConnection = "Data Source=XE"
-           + ";User Id=tomo;Password=hy76cjs9";
+        const string strConnection = "Data Source=XE2"
+           + ";User Id=system;Password=hy76cjs9";
         OracleConnection con;
 
         const String strInsSQL = "Insert into CHART (NENDO,GENRE,HYOKA_NUM,KYOKU_NAME,AUTHOR_NAME,HOUR,MINUTE,SECOND,MEMBER,FILE_SIZE) values "+

@@ -12,36 +12,11 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-
+    <script src="/Scripts/popper.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9638606265613636"
+     crossorigin="anonymous"></script>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <style>
-        .tab {
-  border-bottom: 3px solid #fb4343;
-}
-.tab li {
-  color: #333;
-  float: left;
-  margin: 0 10px -1px 0;
-  padding: 10px 20px;
-  border: 1px solid #fb4343;
-  cursor: pointer;
-  list-style: none;
-  transition: .3s;
-}
-.tab li.active {
-  color: #fff;
-  background: #fb4343;
-  cursor: auto;
-}
- 
-.area ul {
-  display: none;
-}
-.area ul.show {
-  display: block;
-}
-    </style>
 </head>
 <body>
     <form runat="server">
@@ -62,12 +37,12 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
-                <asp:ScriptReference Path="~/Scripts/WebForms/jquery-ui-1.12.1.min.js" />
+                
                 <%--サイト スクリプト--%>
+                
             </Scripts>
         </asp:ScriptManager>
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <%-- <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -75,13 +50,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <a class="navbar-brand" runat="server" href="~/">a</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">a</a></li>
+                        <li><a runat="server" href="~/About">b</a></li>
+                        <li><a runat="server" href="~/Contact">c</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </div>--%>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

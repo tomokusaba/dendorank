@@ -20,7 +20,8 @@ namespace WebApplication2
                             "~/Scripts/WebForms/GridView.js",
                             "~/Scripts/WebForms/DetailsView.js",
                             "~/Scripts/WebForms/TreeView.js",
-                            "~/Scripts/WebForms/WebParts.js"));
+                            "~/Scripts/WebForms/WebParts.js",
+                            "~/Scripts/popper.js"));
 
             // これらのファイルには明示的な依存関係があり、ファイルが動作するためには順序が重要です
             bundles.Add(new ScriptBundle("~/bundles/MsAjaxJs").Include(

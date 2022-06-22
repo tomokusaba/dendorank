@@ -19,8 +19,8 @@ namespace WebApplication2.App_Code
             ocsb = factory.CreateConnectionStringBuilder();
 
             //接続文字列の設定
-            ocsb["Data Source"] = "xe";
-            ocsb["User ID"] = "tomo";
+            ocsb["Data Source"] = "xe2";
+            ocsb["User ID"] = "system";
             ocsb["Password"] = "hy76cjs9";
             conn = factory.CreateConnection();
             conn.ConnectionString = ocsb.ConnectionString;
