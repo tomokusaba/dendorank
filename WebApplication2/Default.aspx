@@ -60,6 +60,7 @@
                         <li><a href="./DendoRank/dendoRank.aspx?id=2020">殿堂チャート・殿堂ポイント2020年度版</a></li>
                         <li><a href="./DendoRank/dendoRank.aspx?id=2021">殿堂チャート・殿堂ポイント2021年度版</a></li>
                         <li><a href="./DendoRank/dendoRank.aspx?id=2022">殿堂チャート・殿堂ポイント2022年度版</a></li>
+                        <li><a href="./DendoRank/dendoRank.aspx?id=2023">殿堂チャート・殿堂ポイント2023年度版</a></li>
                     </ul>
                 </div>
                 <div class="tab-pane" id="toroku">

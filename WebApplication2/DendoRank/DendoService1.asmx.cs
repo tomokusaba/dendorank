@@ -55,6 +55,7 @@ namespace WebApplication2.DendoRank
         const string sql2020 = "select a_name 制作者名, hoshi 得点, (select count(hyoka_num) from chart where author_name = a_name and hyoka_num = 2 and nendo = '2020') 優, (select count(hyoka_num)  from     chart   where     author_name = a_name and  hyoka_num = 1 and  nendo = '2020') 良 , (select count(hyoka_num)   from chart   where author_name = a_name and hyoka_num = 0 and     nendo = '2020') 可 from(   select      sum(     case hyoka_num     when 0 then 1     when 1 then 2     when 2 then 4 end     ) hoshi,     author_name a_name   from      chart    where     nendo = '2020'   group by      author_name    order by hoshi desc) order by 得点 desc,a_name";
         const string sql2021 = "select a_name 制作者名, hoshi 得点, (select count(hyoka_num) from chart where author_name = a_name and hyoka_num = 2 and nendo = '2021') 優, (select count(hyoka_num)  from     chart   where     author_name = a_name and  hyoka_num = 1 and  nendo = '2021') 良 , (select count(hyoka_num)   from chart   where author_name = a_name and hyoka_num = 0 and     nendo = '2021') 可 from(   select      sum(     case hyoka_num     when 0 then 1     when 1 then 2     when 2 then 4 end     ) hoshi,     author_name a_name   from      chart    where     nendo = '2021'   group by      author_name    order by hoshi desc) order by 得点 desc,a_name";
         const string sql2022 = "select a_name 制作者名, hoshi 得点, (select count(hyoka_num) from chart where author_name = a_name and hyoka_num = 2 and nendo = '2022') 優, (select count(hyoka_num)  from     chart   where     author_name = a_name and  hyoka_num = 1 and  nendo = '2022') 良 , (select count(hyoka_num)   from chart   where author_name = a_name and hyoka_num = 0 and     nendo = '2022') 可 from(   select      sum(     case hyoka_num     when 0 then 1     when 1 then 2     when 2 then 4 end     ) hoshi,     author_name a_name   from      chart    where     nendo = '2022'   group by      author_name    order by hoshi desc) order by 得点 desc,a_name";
+        const string sql2023 = "select a_name 制作者名, hoshi 得点, (select count(hyoka_num) from chart where author_name = a_name and hyoka_num = 2 and nendo = '2023') 優, (select count(hyoka_num)  from     chart   where     author_name = a_name and  hyoka_num = 1 and  nendo = '2023') 良 , (select count(hyoka_num)   from chart   where author_name = a_name and hyoka_num = 0 and     nendo = '2023') 可 from(   select      sum(     case hyoka_num     when 0 then 1     when 1 then 2     when 2 then 4 end     ) hoshi,     author_name a_name   from      chart    where     nendo = '2023'   group by      author_name    order by hoshi desc) order by 得点 desc,a_name";
 
         [WebMethod]
         public string[] HelloWorld()
@@ -187,6 +188,9 @@ namespace WebApplication2.DendoRank
                     break;
                 case 2022:
                     sql = sql2022;
+                    break;
+                case 2023:
+                    sql = sql2023;
                     break;
                 default:
                     sql = sql12;
